@@ -43,5 +43,17 @@ int main() {
   printf("%ld\n", sizeof(p4));
   printf("%ld\n", sizeof(p5));
 
+  struct Rectangle r = {5,10};
+
+  printf("%d\n", r.length);
+
+  struct Rectangle *pr = &r;
+
+  (*pr).length = 10;
+  printf("%d\n", r.length);
+
+  pr->length = 15;
+  printf("%d\n", r.length);
+
   return 0;
 }
