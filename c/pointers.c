@@ -55,5 +55,14 @@ int main() {
   pr->length = 15;
   printf("%d\n", r.length);
 
+  struct Rectangle *prec;
+  prec = (struct Rectangle *)malloc(sizeof(struct Rectangle));
+  // prec = new Rectangle; this is cpp code
+
+  prec->length = 17;
+  prec->breadth = 34;
+  printf("%d\n", prec->length);
+  printf("%d\n", prec->breadth);
+
   return 0;
 }
