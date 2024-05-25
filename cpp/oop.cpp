@@ -3,7 +3,8 @@
 
 using namespace std;
 
-struct Rectangle {
+class Rectangle {
+public:
   int length;
   int breadth;
 
@@ -25,7 +26,7 @@ struct Rectangle {
 };
 
 int main() {
-  Rectangle r={0,0};
+  Rectangle r;
 
   int l,b;
   printf("Enter length and breadth\n");
