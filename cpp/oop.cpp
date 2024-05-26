@@ -4,35 +4,65 @@
 using namespace std;
 
 class Rectangle {
-public:
+private:
   int length;
   int breadth;
 
-  void initialise(int l, int b) {
+public:
+  // Default Constructor
+  Rectangle() {
+    length = 0;
+    breadth = 0;
+  }
+
+  // Parameterized Constructor
+  Rectangle(int l, int b) {
     length = l;
     breadth = b;
   }
 
+  // methods
   int area() {
     return length * breadth;
   }
 
   int perimeter() {
-    int p;
+    return 2 * (length+breadth);
+  }
 
-    p = 2 * (length+breadth);
-    return p;
+  // Setter
+  void setLength(int l) {
+    length = l;
+  }
+
+  void setBreadth(int b) {
+    breadth = b;
+  }
+
+  // Getter
+  int getLength() {
+    return length;
+  }
+
+  int getBreadth() {
+    return breadth;
+  }
+
+  // Destructor
+  ~Rectangle() {
+    // usually deallocate memory
+    cout<<"Destructor"<<endl;
   }
 };
 
 int main() {
-  Rectangle r;
+  Rectangle r(10,5);
 
-  int l,b;
-  printf("Enter length and breadth\n");
-  cin>>l>>b;
+  /* int l,b; */
+  /* printf("Enter length and breadth\n"); */
+  /* cin>>l>>b; */
 
-  r.initialise(l, b);
+  /* r.initialise(l, b); */
 
   int a = r.area();
   int peri = r.perimeter();
